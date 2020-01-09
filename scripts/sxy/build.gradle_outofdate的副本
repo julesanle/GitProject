@@ -1,0 +1,126 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    dexOptions {
+        jumboMode true
+    }
+    defaultConfig {
+        applicationId "com.yanxiu.shangxueyuan"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+		flavorDimensions "versionCode"
+		
+		manifestPlaceholders = [
+                PACKAGE_NAME: applicationId   //applicationId
+        ]
+		
+    signingConfigs {
+            release{
+                storeFile file("shangxueyuan.jks")
+                storePassword "yanxiusrt1qaz@wsx"
+                keyAlias "shangxueyuanandroid.keystore"
+                keyPassword "yanxiusrt1qaz@wsx"
+                }
+        }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+                    minifyEnabled false
+            zipAlignEnabled true
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+			signingConfig signingConfigs.release
+			 applicationVariants.all { variant ->
+                        variant.outputs.all { output ->def outputFile= output.outputFile
+                            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                               
+
+                                        def fileName="sxy_${versionName}-${variant.productFlavors[0].name}.apk"
+										outputFileName = fileName
+                                }
+                            }
+                        }						
+
+        }
+//        debug {
+//            minifyEnabled false
+//            debuggable true
+//  //          signingConfig signingConfigs.debug
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+    }
+
+productFlavors {
+shoujizhushou360{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "shoujizhushou360"]
+}
+wandoujia{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "wandoujia"]
+}
+xiaomi{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "xiaomi"]
+}
+huaweihuizhi{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "huaweihuizhi"]
+}
+lenovomm{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "lenovomm"]
+}
+txyingyongbao{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "txyingyongbao"]
+}
+vivo{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "vivo"]
+}
+oppo{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "oppo"]
+}
+others{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "others"]
+}
+baidushoujizhushou{
+ manifestPlaceholders = [INSTALL_CHANNEL_VALUE: "baidushoujizhushou"]
+}
+
+}
+productFlavors.all { flavor ->
+      flavor.manifestPlaceholders = [INSTALL_CHANNEL_VALUE: name]
+  }
+
+
+}
+
+    sourceSets {
+        main {
+            jniLibs.srcDir(['libs'])
+            manifest.srcFile 'src/main/AndroidManifest.xml'
+            java.srcDirs = ['src/main/java', 'src/main/aidl']
+            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+            aidl.srcDirs = ['src/main/aidl']
+            res.srcDirs = ['src/main/res']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation "com.github.bumptech.glide:glide:3.8.0"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/litepal_db_1.1.1.jar')
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation project(':EXueELianNetwork')
+    implementation project(':EXueELianRefreshLibrary')
+    compile 'com.github.chrisbanes.photoview:library:+'
+}
+}
