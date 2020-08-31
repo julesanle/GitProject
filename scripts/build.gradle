@@ -14,8 +14,6 @@ android {
             }
         }*/
 
-
-
         applicationId "com.yanxiu.ruixuetang"
         minSdkVersion cfgs.minSdkVersion
         targetSdkVersion cfgs.targetSdkVersion
