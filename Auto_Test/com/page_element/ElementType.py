@@ -19,7 +19,7 @@ class ElementType(Enum):
 		 AlertContainer, #红绿框
 		 SystemAlert
 
-	 public static enum Statustype{ 
+	 public static enum Statustype:
 		NoEffect,
 		Effect
 		
