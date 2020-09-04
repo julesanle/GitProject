@@ -11,7 +11,7 @@ class Checkelement:
     # 等待元素加载完成
     def wait_element(self,driver,time,locator):
         try:
-            WebDriverWait(driver,time).until(EC.presence_of_element_located((locator)))
+            WebDriverWait(driver,time).until(EC.presence_of_element_located(locator))
             return True
             # logger.info("加载完成");
         except Exception as e:

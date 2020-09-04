@@ -1,69 +1,49 @@
-package DataModel.PageElement;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import org.openqa.selenium.By;
-
-import DataModel.PageElement.ElementType.Htmltype;
-import DataModel.PageElement.ElementType.Statustype;
 
 
-public class PageElement {
-	locatorlist=ArrayList<By>();
-	private By elemetlocator;
-	private By elemetlocator2;
-	private String value;
-	private Statustype status;
-	public PageElement(){}
+class PageElement:
+	locatorlist= list()
+	def __init__(self,elementName,type,loc_type,locator,value):
+		self.elementName = elementName
+		self.type = type
+		self.loc_type = loc_type
+		self.locator = locator
+		self.value = value
+
+	def get_name(self):
+		return self.elementName
+
+	def get_locator(self):
+		return self.locator
+
+	def getvalue(self):
+		return self.value
 	
-	public String getElementName() {
-		return elementName;
-	}
-	public List<By> getlocatorlist() {
-		return locatorlist;
-	}
-	public String getvalue() {
-		return value;
-	}
-	
-	public Htmltype gettype() {
-		return type;
-	}
-	public By getElemetlocator() {
-		return elemetlocator;
-	}
-	public By getElemetlocator2() {
-		return elemetlocator2;
-	}
-	public Statustype getStatus() {
-		return status;
-	}
+	def gettype(self):
+		return self.type
 
+	def get_loctype(self):
+		return self.loc_type
+
+	def  getStatus(self):
+		return self.status
 	
 	# 单独设置字段
-	public void setType(Htmltype type) {
-		this.type = type;
-	}
-	public void setElementName(String elementName) {
-		this.elementName = elementName;
-	}
-	public void setlocator(List<By> locator) {
-		this.locatorlist = locator;
-	}
-	public void setValue(String value) {
-		this.value = value;
-	}
-	public void setElemetlocator(By elemetlocator) {
-		this.elemetlocator = elemetlocator;
-	}
-	public void setElemetlocator2(By elemetlocator2) {
-		this.elemetlocator2 = elemetlocator2;
-	}
-	public void setStatus(Statustype status) {
-		this.status = status;
-	}
-	
+	def setType(self,type):
+		self.type = type
+
+	def setElementName(self, elementName):
+		self.elementName = elementName
+
+	def setlocator(self,locator):
+		self.locator = locator
+
+	def setValue(self, value):
+		self.value = value
+
+	def setStatus(self, status):
+		self.status = status
+
+	'''
 	public void Input(String elementName,By elemetlocator,String value){
 		this.type = Htmltype.Input;
 		this.elementName = elementName;
@@ -171,8 +151,6 @@ public class PageElement {
 		}
 		return locatorlist;
 	}
-
-
 	
-	
-}
+	'''
+

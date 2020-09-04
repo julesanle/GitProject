@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ad2c8e8-28fb-466f-806c-8d331a0c579f" name="Default Changelist" comment="一些脚本">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/com/element_executor/ExecutorCase.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/com/element_executor/ExecutorSingle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/com/util/AccessToken.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UiTest/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UiTest/demo1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UiTest/demo2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/download_QR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/GitProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GitProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/driver/driver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/driver/driver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_executor/Executor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_op/Clear.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_op/Clear.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_op/Click.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_op/Click.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_op/DoubleClick.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_op/DoubleClick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_op/Getattribute.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_op/Getattribute.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_op/Gettext.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_op/Gettext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_op/SendKeys.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_op/SendKeys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_process/Input.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_process/Input.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_process/RadioCheckBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_process/RadioCheckBox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_process/Scroll.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_process/Scroll.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/element_process/Select.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/element_process/Select.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/page_element/PageElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/page_element/PageElement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/util/Checkelement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/util/Checkelement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/util/GetElement.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/util/GetElement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/util/Log.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/util/Log.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/util/Login.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/util/Login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/util/Mainmenu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/com/util/ScreenShot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/com/util/ScreenShot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/config/default.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/config/default.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/config/read_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/config/read_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/main_test/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/main_test/test.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Rebase.Settings">
+    <option name="ONTO" value="refs/remotes/v1.0/master" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="julesanle &lt;877027967@qq.com&gt;" />
+        <option value="songfangfang" />
+      </list>
+    </option>
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="dev1.0" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="27db37c0-05c7-4efc-970f-9746133d34c5" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\gitStudy\GitProject\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WbiM6Cdi7R1RWv5UMG8JP7AyxI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Auto_Test/com/page_element" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.splitter.proportion" value="0.22067595" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\page_element" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\element_process" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\element_op" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\util" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\element_executor" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\element_executor" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com\driver" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test\com" />
+      <recent name="E:\gitStudy\GitProject\Auto_Test" />
+      <recent name="E:\gitStudy\GitProject\MyStudy\test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.test">
+    <configuration name="AccessToken" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GitProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Test/com/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Test/com/util/AccessToken.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExecutorCase" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GitProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Test/com/util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\gitStudy\GitProject\Auto_Test\com\element_executor\ExecutorCase.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ExecutorSingle" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GitProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Test/com/element_executor" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Test/com/element_executor/ExecutorSingle.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="driver" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GitProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Test/com/driver" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Test/com/driver/driver.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="GitProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Auto_Test/main_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Auto_Test/main_test/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.ExecutorCase" />
+      <item itemvalue="Python.ExecutorSingle" />
+      <item itemvalue="Python.driver" />
+      <item itemvalue="Python.AccessToken" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.ExecutorSingle" />
+        <item itemvalue="Python.AccessToken" />
+        <item itemvalue="Python.driver" />
+        <item itemvalue="Python.ExecutorCase" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\srt\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ad2c8e8-28fb-466f-806c-8d331a0c579f" name="Default Changelist" comment="" />
+      <created>1560490082993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1560490082993</updated>
+      <workItem from="1579424669719" duration="4364000" />
+      <workItem from="1588737101375" duration="463000" />
+      <workItem from="1588737712384" duration="117000" />
+      <workItem from="1588737850598" duration="26427000" />
+      <workItem from="1591067399768" duration="26740000" />
+      <workItem from="1591170424782" duration="8678000" />
+      <workItem from="1595494283284" duration="5449000" />
+      <workItem from="1597027492913" duration="40309000" />
+      <workItem from="1597386304227" duration="9819000" />
+      <workItem from="1598166753321" duration="60808000" />
+      <workItem from="1598836886324" duration="41544000" />
+      <workItem from="1599095920488" duration="15238000" />
+      <workItem from="1599117521500" duration="32887000" />
+    </task>
+    <task id="LOCAL-00001" summary="commit upload方法">
+      <created>1560490676918</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560490676918</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit upload方法">
+      <created>1561458894404</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1561458894404</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit upload方法">
+      <created>1577937349691</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577937349691</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit upload方法">
+      <created>1577947554045</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577947554045</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit upload方法">
+      <created>1577964072203</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1577964072203</updated>
+    </task>
+    <task id="LOCAL-00006" summary="commit upload方法">
+      <created>1578552110810</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578552110811</updated>
+    </task>
+    <task id="LOCAL-00007" summary="commit upload方法">
+      <created>1578553092582</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578553092582</updated>
+    </task>
+    <task id="LOCAL-00008" summary="commit upload方法">
+      <created>1578555655752</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578555655752</updated>
+    </task>
+    <task id="LOCAL-00009" summary="创建类方法">
+      <created>1578561287060</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578561287060</updated>
+    </task>
+    <task id="LOCAL-00010" summary="创建类方法">
+      <created>1578563339217</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578563339217</updated>
+    </task>
+    <task id="LOCAL-00011" summary="创建类方法">
+      <created>1578563809128</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578563809128</updated>
+    </task>
+    <task id="LOCAL-00012" summary="创建类方法">
+      <created>1578886757774</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578886757774</updated>
+    </task>
+    <task id="LOCAL-00013" summary="创建类方法">
+      <created>1578981721611</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1578981721611</updated>
+    </task>
+    <task id="LOCAL-00014" summary="创建类方法">
+      <created>1578981735819</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578981735819</updated>
+    </task>
+    <task id="LOCAL-00015" summary="新建目录">
+      <created>1598840902894</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598840902895</updated>
+    </task>
+    <task id="LOCAL-00016" summary="创建类方法">
+      <created>1598841594287</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1598841594287</updated>
+    </task>
+    <task id="LOCAL-00017" summary="daily study">
+      <created>1598842135035</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598842135035</updated>
+    </task>
+    <task id="LOCAL-00018" summary="srxUI自动化">
+      <created>1598843270424</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1598843270424</updated>
+    </task>
+    <task id="LOCAL-00019" summary="更新文件">
+      <created>1598844149789</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1598844149789</updated>
+    </task>
+    <task id="LOCAL-00020" summary="一些脚本">
+      <created>1598844207365</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1598844207365</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:E:/gitStudy/GitProject/Auto_Test/com" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit upload方法" />
+    <MESSAGE value="新建目录" />
+    <MESSAGE value="创建类方法" />
+    <MESSAGE value="daily study" />
+    <MESSAGE value="srxUI自动化" />
+    <MESSAGE value="更新文件" />
+    <MESSAGE value="一些脚本" />
+    <option name="LAST_COMMIT_MESSAGE" value="一些脚本" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="25" key="#Inspections" timestamp="1598523805717">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="25" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1598523805717" />
+    <state x="398" y="31" key="#Unittests_for_test.MyTest.test2" timestamp="1598604249006">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="398" y="31" key="#Unittests_for_test.MyTest.test2/0.0.1366.728@0.0.1366.728" timestamp="1598604249006" />
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1598844204912">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1598844204912" />
+    <state x="554" y="259" width="274" height="282" key="Github.ShareDialog" timestamp="1598841951247">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="554" y="259" width="274" height="282" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1598841951247" />
+    <state width="1323" height="52" key="GridCell.Tab.0.bottom" timestamp="1599201315582">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="52" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599201315582" />
+    <state width="1323" height="52" key="GridCell.Tab.0.center" timestamp="1599201315581">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="52" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599201315581" />
+    <state width="1323" height="52" key="GridCell.Tab.0.left" timestamp="1599201315581">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="52" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599201315581" />
+    <state width="1323" height="52" key="GridCell.Tab.0.right" timestamp="1599201315581">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="52" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599201315581" />
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom" timestamp="1599117449393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599117449393" />
+    <state width="1323" height="222" key="GridCell.Tab.1.center" timestamp="1599117449393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599117449393" />
+    <state width="1323" height="222" key="GridCell.Tab.1.left" timestamp="1599117449393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599117449393" />
+    <state width="1323" height="222" key="GridCell.Tab.1.right" timestamp="1599117449393">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="222" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599117449393" />
+    <state x="538" y="77" key="RollbackChangesDialog" timestamp="1598513580854">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="538" y="77" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1598513580854" />
+    <state x="153" y="0" key="SettingsEditor" timestamp="1599205323588">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="153" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1599205323588" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1599206851665">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1599206851665" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1599117523272">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1599117523272" />
+    <state x="309" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591082903807">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="309" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1591082903807" />
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598429715322">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1598429715322" />
+    <state x="394" y="166" key="git4idea.merge.GitPullDialog" timestamp="1598841650392">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="394" y="166" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1598841650392" />
+    <state x="494" y="216" key="git4idea.ui.GitTagDialog" timestamp="1598843197048">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="494" y="216" key="git4idea.ui.GitTagDialog/0.0.1366.728@0.0.1366.728" timestamp="1598843197048" />
+    <state x="349" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1599191230309">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="349" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599191230309" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/GitProject$test.coverage" NAME="test Coverage Results" MODIFIED="1599201315561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/main_test" />
+    <SUITE FILE_PATH="coverage/GitProject$download_QR.coverage" NAME="download_QR Coverage Results" MODIFIED="1591163662388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GitProject$ReadExcel.coverage" NAME="ReadExcel Coverage Results" MODIFIED="1598950370049" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/com/util" />
+    <SUITE FILE_PATH="coverage/GitProject$ExecutorSingle.coverage" NAME="ExecutorSingle Coverage Results" MODIFIED="1599197955234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/com/element_executor" />
+    <SUITE FILE_PATH="coverage/GitProject$AccessToken.coverage" NAME="AccessToken Coverage Results" MODIFIED="1599191944649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/com/util" />
+    <SUITE FILE_PATH="coverage/GitProject$QR.coverage" NAME="QR Coverage Results" MODIFIED="1597031843037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/GitProject$demo2__1_.coverage" NAME="demo2 (1) Coverage Results" MODIFIED="1579425768019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UiTest" />
+    <SUITE FILE_PATH="coverage/GitProject$Unittests_in_Auto_Test.coverage" NAME="Unittests in Auto_Test Coverage Results" MODIFIED="1598841740961" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test" />
+    <SUITE FILE_PATH="coverage/GitProject$demo1.coverage" NAME="demo1 Coverage Results" MODIFIED="1579501027211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UiTest" />
+    <SUITE FILE_PATH="coverage/GitProject$spit_test.coverage" NAME="spit_test Coverage Results" MODIFIED="1597032277903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test" />
+    <SUITE FILE_PATH="coverage/GitProject$QR__1_.coverage" NAME="QR (1) Coverage Results" MODIFIED="1597032161297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test" />
+    <SUITE FILE_PATH="coverage/GitProject$Login.coverage" NAME="Login Coverage Results" MODIFIED="1598929022808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/com/util" />
+    <SUITE FILE_PATH="coverage/GitProject$read_config.coverage" NAME="read_config Coverage Results" MODIFIED="1598578331883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/config" />
+    <SUITE FILE_PATH="coverage/GitProject$driver.coverage" NAME="driver Coverage Results" MODIFIED="1599125025396" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Auto_Test/com/driver" />
+  </component>
+</project>

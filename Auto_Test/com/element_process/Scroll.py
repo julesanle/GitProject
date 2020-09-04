@@ -1,6 +1,5 @@
-from Auto_Test.com.util import Checkelement
-from Auto_Test.com.util import GetElement
-from Auto_Test.com.element_op import Click
+from Auto_Test.com.util.Checkelement import Checkelement
+
 import time
 
 

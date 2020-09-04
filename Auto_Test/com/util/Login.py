@@ -12,10 +12,11 @@ class Login:
 	con = ConfigParser()
 
 	def login(self,driver,config_path):
-		user =  self.con.get_config(config_path, 'LoginElement', 'login_user')
-		psw = self.con.get_config(config_path, 'LoginElement', 'login_pwd')
+		# 此处对应的ini文件中[登录] 节点的数据，用例中 模块也须对应
+		user =  self.con.get_config(config_path, '登录', 'login_user')
+		psw = self.con.get_config(config_path, '登录', 'login_pwd')
 		if self.check_element.wait_element(driver, 20,
-			(By.XPATH,"/html/body/section/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[2]/input[1]")):
+				(By.XPATH,"/html/body/section/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[2]/input[1]")):
 			driver.find_element(By.XPATH,
 				'/html/body/section/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[2]/input[1]').send_keys(user)
 			time.sleep(1)
@@ -29,7 +30,10 @@ class Login:
 			# 	'/html/body/section/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div[2]/div[3]/a'))
 			if self.check_element.wait_element(driver,20,(By.XPATH,'/html/body/section/div[2]/div[1]/header/section/div[2]/div[3]/div/div/div[1]/div/a/span')):
 				print('登录成功，已进入首页')
+				time.sleep(5)
 				return True
+			print('bbbbbb')
+		print('ccccc')
 		return False
 
 	# 退出

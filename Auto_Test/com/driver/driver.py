@@ -15,10 +15,10 @@ class Driver:
         # driver初始化
         browserdriverfactory = BrowserDriverFactory()
         con = ConfigParser()
-        local_driver = con.get_config(config_path,'LoginElement', 'local_driver')
-        remote_driver = con.get_config(config_path,'LoginElement', 'remote_driver')
-        visit_url = con.get_config(config_path,'LoginElement','url')
-        driver_type = con.get_config(config_path,'LoginElement','local')
+        local_driver = con.get_config(config_path,'Initial', 'local_driver')
+        remote_driver = con.get_config(config_path,'Initial', 'remote_driver')
+        visit_url = con.get_config(config_path,'Initial','url')
+        driver_type = con.get_config(config_path,'Initial','local')
         if driver_type.__eq__('1'):
             driver =  browserdriverfactory.get_webdriver(local_driver)
 

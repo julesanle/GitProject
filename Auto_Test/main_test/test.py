@@ -1,24 +1,38 @@
-from selenium import webdriver
 from Auto_Test.com.driver.driver import Driver
-from Auto_Test.com.util import Create_Report
 from Auto_Test.com.util.Login import *
-import time
+from Auto_Test.com.element_executor.ExecutorCase import ExecutorCase
+from Auto_Test.com.util import Create_Report
 import unittest
 
 
 class MyTest(unittest.TestCase):
     driver = Driver()
     login = Login()
+    case = ExecutorCase()
     config_path = 'E:\\default.ini'
+
+    # 初始化driver
+    driver = driver.driver_initial(config_path)
+
     def test1(self):
-        # 初始化driver，登录
-        driver = self.driver.driver_initial(self.config_path)
-        self.login.login(driver, self.config_path)
-        time.sleep(5)
-        driver.quit()
+        #登录
+        flag=self.login.login(self.driver, self.config_path)
+        self.assertTrue(flag)
+        self.driver.quit()
+
     def test2(self):
-        pass
+        flag = False
+        self.assertTrue(flag)
+
+    def test3(self):
+        #读用例 执行
+        print(type(By.XPATH))
+        flag = self.case.read_excel(self.driver,self.config_path)
+        self.assertTrue(flag)
+        self.driver.quit()
+
 if __name__ == '__main__':
-    # mytest = MyTest()
-    # mytest.test1()
-    Create_Report.create_report(MyTest('test1'))
+     mytest = MyTest()
+     mytest.test3()
+    # Create_Report.create_report(MyTest('test3'))
+    # Create_Report.create_report(MyTest)

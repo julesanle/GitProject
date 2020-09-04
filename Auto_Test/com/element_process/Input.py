@@ -1,39 +1,56 @@
-from Auto_Test.com.util import Checkelement
-from Auto_Test.com.util import GetElement
-from Auto_Test.com.element_op import Click
+from Auto_Test.com.util.Checkelement import Checkelement
+from Auto_Test.com.util.GetElement import GetElement
+from Auto_Test.com.element_op.Click import Click
+from selenium.webdriver.common.by import By
+from Auto_Test.com.element_op.SendKeys import SendKeys
 
 import logging
 import time
+
 
 class Input:
 	click = Click()
 	check_element = Checkelement()
 	get_element = GetElement()
+	send_keys = SendKeys()
 
-	def InputKeysProcess(self, driver,element):
-		if self.check_element.Waitelement(driver, 10, element.getElemetlocator()):
+
+	# element是个字典
+	def InputKeysProcess(self, driver,element,input_keys):
+		element_name = element['element_name']
+		element_type = element['type']
+		loc_type = element['loc_type']
+		locator = element['locator']
+		wait_parameter = (eval(loc_type),locator)
+		if self.check_element.wait_element(driver, 20, wait_parameter):
 			try:
-				self.get_element.scrollToElement(driver, element.getElemetlocator())
+				# self.get_element.scrollToElement(driver, element)
 				time.sleep(1)
-				pageElement=driver.findElement(element.getElemetlocator())
+				page_element=driver.find_element(eval(loc_type),locator)
+				self.click.clickelement(driver,wait_parameter,element_name)
 				# 文件上传，直接赋值：地址值
-				if pageElement.getAttribute("type").equals("file"):
-					pageElement.sendKeys(element.getvalue())
+				if page_element.get_attribute('value')=="file":
+					page_element.send_keys()
 				# 日期选择
-				else:
+				elif '日期' in element_name:
+					#输入日期
 					# driver_js.executeScript("arguments[0].value='"+element.getvalue()+"'",driver.findElement(element.getElemetlocator()));
-					if element.get_elementName().contains("日期"):
-						  time.sleep(1)
+					time.sleep(1)
 						  # Actions(driver).sendKeys(Keys.ENTER).perform()
-					else:
-						  # 触发输入框校验
-						self.click.clickelement(driver,element.getElemetlocator(),element.get_elementName())
-			     return True
-			 # except Exception as e:
-				# logging.error("复选框:" + element.get_elementName() + "不可被操作")
+				else:
+					# 输入内容
+					self.send_keys.send_keys(driver,wait_parameter,input_keys,element_name)
+			except Exception as e:
+				logging.error(str(e))
+				logging.error("复选框:" + element_name + "不可被操作")
+				return False
+			return True
+		else:
+			print("找不到元素")
+			return False
 
 	def InputProcess(self,driver,element):
-		inputCheck=False
+		input_check=False
 		time1=0
 		# 点击此输入框返回值
 		self.click.clickelement(driver,element.getElemetlocator(),element.get_elementName())
@@ -41,20 +58,19 @@ class Input:
 		# 校验是否有值
 		elementExist=self.check_element.isvalue(driver,20,element.getElemetlocator(),element.get_elementName());
 		if elementExist:
-			inputCheck=True
+			input_check=True
 
 		else:
 			while time1<30:
 				time1+=1
 				if self.check_element.isvalue(driver,20,element.getElemetlocator(),element.get_elementName()):
-					inputCheck=True
+					input_check=True
 					break
-
-		return inputCheck
+		return input_check
 
 	
 	def InputCheck(self, driver,element):
 		return self.InputProcess(driver,element)
 
-	def InputKeys(self, driver,element):
-		return self.InputKeysProcess(driver,element)
+	def InputKeys(self, driver,element,input_keys):
+		return self.InputKeysProcess(driver,element,input_keys)

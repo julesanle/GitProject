@@ -5,7 +5,7 @@ import configparser
 
 class ConfigParser():
 
-    def get_config(self,config_path,sector, item):
+    def get_config(self,config_path,sector,item):
         try:
 
             cf = configparser.ConfigParser()  # 创建对象
