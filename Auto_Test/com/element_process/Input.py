@@ -3,6 +3,7 @@ from Auto_Test.com.util.GetElement import GetElement
 from Auto_Test.com.element_op.Click import Click
 from selenium.webdriver.common.by import By
 from Auto_Test.com.element_op.SendKeys import SendKeys
+from selenium.webdriver.common.action_chains import ActionChains
 
 import logging
 import time
@@ -22,24 +23,18 @@ class Input:
 		loc_type = element['loc_type']
 		locator = element['locator']
 		wait_parameter = (eval(loc_type),locator)
+		all_handles = driver.window_handles
+		# print(all_handles)
+		if len(all_handles)>1:
+			driver.switch_to.window(all_handles[-1])  # 切换到新窗口
 		if self.check_element.wait_element(driver, 20, wait_parameter):
 			try:
-				# self.get_element.scrollToElement(driver, element)
-				time.sleep(1)
 				page_element=driver.find_element(eval(loc_type),locator)
+				ActionChains(driver).move_to_element(page_element).perform()
 				self.click.clickelement(driver,wait_parameter,element_name)
 				# 文件上传，直接赋值：地址值
-				if page_element.get_attribute('value')=="file":
-					page_element.send_keys()
-				# 日期选择
-				elif '日期' in element_name:
-					#输入日期
-					# driver_js.executeScript("arguments[0].value='"+element.getvalue()+"'",driver.findElement(element.getElemetlocator()));
-					time.sleep(1)
-						  # Actions(driver).sendKeys(Keys.ENTER).perform()
-				else:
-					# 输入内容
-					self.send_keys.send_keys(driver,wait_parameter,input_keys,element_name)
+				# Actions(driver).sendKeys(Keys.ENTER).perform()
+				self.send_keys.send_keys(driver,wait_parameter,input_keys,element_name)
 			except Exception as e:
 				logging.error(str(e))
 				logging.error("复选框:" + element_name + "不可被操作")

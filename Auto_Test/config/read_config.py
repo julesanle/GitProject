@@ -7,13 +7,11 @@ class ConfigParser():
 
     def get_config(self,config_path,sector,item):
         try:
-
             cf = configparser.ConfigParser()  # 创建对象
             cf.read(config_path)  # 读取配置文件，直接读取ini文件内容encoding='UTF-8' E:\default.ini
-        except KeyError as exp:
-             print(exp)
-        finally:
-            return cf.get(sector,item)
+            return cf.get(sector, item)
+        except configparser.NoOptionError as exp:
+            return -1
 
 
 if __name__ == '__main__':

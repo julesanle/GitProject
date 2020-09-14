@@ -3,6 +3,7 @@ from Auto_Test.com.util.Login import *
 from Auto_Test.com.element_executor.ExecutorCase import ExecutorCase
 from Auto_Test.com.util import Create_Report
 import unittest
+import time,datetime,locale
 
 
 class MyTest(unittest.TestCase):
@@ -12,13 +13,12 @@ class MyTest(unittest.TestCase):
     config_path = 'E:\\default.ini'
 
     # 初始化driver
-    driver = driver.driver_initial(config_path)
+    # driver = driver.driver_initial(config_path)
 
     def test1(self):
         #登录
-        flag=self.login.login(self.driver, self.config_path)
-        self.assertTrue(flag)
-        self.driver.quit()
+         flag=self.login.login(self.driver, self.config_path)
+         self.assertTrue(flag)
 
     def test2(self):
         flag = False
@@ -26,10 +26,9 @@ class MyTest(unittest.TestCase):
 
     def test3(self):
         #读用例 执行
-        print(type(By.XPATH))
-        flag = self.case.read_excel(self.driver,self.config_path)
+        #读用例 执行
+        flag = self.case.read_excel(self.config_path)
         self.assertTrue(flag)
-        self.driver.quit()
 
 if __name__ == '__main__':
      mytest = MyTest()

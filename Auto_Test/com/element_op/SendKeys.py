@@ -13,7 +13,6 @@ class SendKeys:
 		try:
 			if self.check_element.wait_element(driver, 20, locator):
 				self.get_element.scrollToElement(driver, locator)
-				time.sleep(1)
 				driver.find_element(locator[0],locator[1]).send_keys(words)
 				return True
 			else:

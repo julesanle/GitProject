@@ -29,17 +29,4 @@ class Filemethod:
 		# String date=df.format(cal.getTime());
 		return date
 
-# 写出至文件
-	def writefile(self, str, out):
-		pass
-
-	
-# 建立路径
-	def creatpath(self, outpath):
-		pass
- 		# File file=new File(outpath);
-		# if(!file.exists()){
-		# 	file.getParentFile().mkdirs();
-
-
 

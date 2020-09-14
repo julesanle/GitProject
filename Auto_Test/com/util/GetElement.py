@@ -109,7 +109,22 @@ class GetElement:
 			ele = driver.find_element(locator[0],locator[1])
 			js = "arguments[0].scrollIntoView();"
 			driver.execute_script(js,ele)
+			time.sleep(0.5)
 			return True
 		except Exception as e:
 			logging.error(str(e))
 			return False
+
+	def get_eleloc(self,driver,locator,i):
+		try:
+			ul = driver.find_element(locator[0],locator[1])
+			li = ul.find_elements_by_xpath('li')
+			if i == '-1':
+				loc=locator[1]+'/li['+str(len(li))+']'
+			else:
+				loc = locator[1]+'/li['+i+']'
+			return loc
+		except Exception as e:
+			logging.error(str(e))
+			return False
+
