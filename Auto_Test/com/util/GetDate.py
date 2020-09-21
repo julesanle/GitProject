@@ -3,34 +3,31 @@ import time,datetime,locale
 
 class GetDate:
 
-    now = datetime.datetime.now()
-    next_date = now + datetime.timedelta(days=+1)
-
-    def start_date(self):
-        # 取当天后一天
-        locale.setlocale(locale.LC_CTYPE, 'chinese')
-        start_date = self.next_date.strftime("%Y/%m/%d")
-        return start_date
-
     def start_time(self):
-        set_time = time.strptime('00:00:00', "%H:%M:%S")
-        start_time = time.strftime("%H:%M", set_time)
-        return start_time
+        # set_time = time.strptime('00:00:00', "%H:%M:%S")
+        # start_time = time.strftime("%H:%M:%S", set_time)
+        now = datetime.datetime.now()
+        time_str = now + datetime.timedelta(minutes=2)  # seconds
+        return time_str.strftime("%H:%M:%S")
 
     def set_datetime(self):
-        return self.next_date + datetime.timedelta(hours=+72)
+        stime = self.start_datetime()
+        dtime = datetime.datetime.strptime(stime, "%Y-%m-%d %H:%M:%S")
+        return dtime + datetime.timedelta(days=+7.5)
 
     def end_date(self):
         end_data = self.set_datetime().strftime('%Y/%m/%d')
         return end_data
 
     def end_time(self):
-        end_time = self.set_datetime().strftime('%H:%M')
+        end_time = self.set_datetime().strftime('%H:%M:%S')
         return end_time
 
     def start_datetime(self):  #2020-10-06 00:00
-        time_str = self.start_date()+self.start_time()
-        return time_str
+        # time_str = self.start_date()+' '+self.start_time()
+        now = datetime.datetime.now()
+        time_str = now+datetime.timedelta(seconds=+60) #seconds
+        return time_str.strftime("%Y-%m-%d %H:%M:%S")
 
     def end_datetime(self):
-        self.set_datetime()
+        return self.set_datetime().strftime('%Y-%m-%d %H:%M:%S')

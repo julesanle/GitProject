@@ -26,7 +26,6 @@ class MyTest(unittest.TestCase):
 
     def test3(self):
         #读用例 执行
-        #读用例 执行
         flag = self.case.read_excel(self.config_path)
         self.assertTrue(flag)
 

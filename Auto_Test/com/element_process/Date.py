@@ -1,5 +1,7 @@
 from Auto_Test.com.util.GetDate import GetDate
-
+from selenium.webdriver.common.by import By
+import time
+import datetime
 
 class DateEntry:
     get_date = GetDate()
@@ -10,35 +12,59 @@ class DateEntry:
         loc_type = element['loc_type']
         locator = element['locator']
         input_date = None
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
         try:
-            page_element = driver.find_element(eval(element_type),locator)
+            page_element = driver.find_element(eval(loc_type),locator)
             js1 = "arguments[0].removeAttribute('readonly')"
-            driver.execute_script(js1, page_element)
+            driver.execute_script(js1,page_element)
             if '开始' in element_name:
                 input_date = self.get_date.start_datetime()
-            elif '截止' in element_name or '结束' in element_name:
+                print(element_name+'-----'+input_date)
+            elif '结束' in element_name or '截止' in element_name:
                 input_date =self.get_date.end_datetime()
             else:
                 print('时间控件取名有误')
                 return False
-            js2 = "document.querySelector('css selector').value=%s"%input_date
-            driver.execute_script(js2)
+            js2 = "arguments[0].value='';"
+            driver.execute_script(js2,page_element)
+            page_element.send_keys(input_date)
+            time.sleep(0.5)
             return True
         except Exception as e:
             print(str(e))
             return False
 
-        def other(self):
-            if '开始日期' in element_name:
-                input_keys = self.get_date.start_date()
-            elif '开始时间' in element_name:
-                input_keys = self.get_date.start_time()
-                print(input_keys)
-            elif '结束日期' in element_name:
-                input_keys = self.get_date.end_date()
-            elif '结束时间' in element_name:
-                input_keys = self.get_date.end_time()
-            elif '开始日期时间' in element_name:
-                input_keys = self.get_date.start_datetime()
-            elif '结束日期时间' in element_name:
-                input_keys = self.get_date.end_datetime()
+    def time_input(self, driver, element):
+        element_name = element['element_name']
+        element_type = element['type']
+        loc_type = element['loc_type']
+        locator = element['locator']
+        input_date = None
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
+        try:
+            page_element = driver.find_element(eval(loc_type),locator)
+            js1 = "arguments[0].removeAttribute('readonly')"
+            driver.execute_script(js1,page_element)
+            if '开始' in element_name:
+                input_date = self.get_date.start_time()
+                print(element_name+'-----'+input_date)
+            elif '结束' in element_name or '截止' in element_name:
+                input_date =self.get_date.end_time()
+                print(element_name+'-----'+input_date)
+            else:
+                print('时间控件取名有误')
+                return False
+            js2 = "arguments[0].value='';"
+            driver.execute_script(js2,page_element)
+            page_element.send_keys(input_date)
+            time.sleep(0.5)
+            return True
+        except Exception as e:
+            print(str(e))
+            return False

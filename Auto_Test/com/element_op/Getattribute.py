@@ -10,7 +10,7 @@ class Getattribute:
 		# locator须是tuple  (loc_type,locator)
 
 		try:
-			if self.checkelement.wait_element(driver, 20, locator):
+			if self.checkelement.wait_element(driver, 60, locator):
 				time.sleep(1)
 				return driver.find_element(locator).get_attribute(attribute)
 			else:

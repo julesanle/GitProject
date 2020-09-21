@@ -15,8 +15,12 @@ class DoubleClick:
 
     def click_element(self, driver, locator, description):
         # locator须是tuple  (loc_type,locator)
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
         try:
-            if self.check_element.wait_element(driver, 20, locator):
+            if self.check_element.wait_element(driver, 60, locator):
                 self.scroll.scrollToElement(driver, locator)
                 time.sleep(1)
                 ActionChains(driver).double_click(locator).perform()

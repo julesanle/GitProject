@@ -17,7 +17,7 @@ class Input:
 
 
 	# element是个字典
-	def InputKeysProcess(self, driver,element,input_keys):
+	def InputKeys(self, driver,element,input_keys):
 		element_name = element['element_name']
 		element_type = element['type']
 		loc_type = element['loc_type']
@@ -27,14 +27,15 @@ class Input:
 		# print(all_handles)
 		if len(all_handles)>1:
 			driver.switch_to.window(all_handles[-1])  # 切换到新窗口
-		if self.check_element.wait_element(driver, 20, wait_parameter):
+		if self.check_element.wait_element(driver, 60, wait_parameter):
+			time.sleep(1)
 			try:
-				page_element=driver.find_element(eval(loc_type),locator)
-				ActionChains(driver).move_to_element(page_element).perform()
-				self.click.clickelement(driver,wait_parameter,element_name)
+				# self.click.clickelement(driver,wait_parameter,element_name)
 				# 文件上传，直接赋值：地址值
 				# Actions(driver).sendKeys(Keys.ENTER).perform()
 				self.send_keys.send_keys(driver,wait_parameter,input_keys,element_name)
+				js2 = "arguments[0].value="+ input_keys
+				driver.execute_script(js2,driver.find_element(eval(loc_type),locator))
 			except Exception as e:
 				logging.error(str(e))
 				logging.error("复选框:" + element_name + "不可被操作")
@@ -44,28 +45,21 @@ class Input:
 			print("找不到元素")
 			return False
 
-	def InputProcess(self,driver,element):
+	def InputCheck(self,driver,element):
 		input_check=False
 		time1=0
 		# 点击此输入框返回值
 		self.click.clickelement(driver,element.getElemetlocator(),element.get_elementName())
 		time.sleep(1)
 		# 校验是否有值
-		elementExist=self.check_element.isvalue(driver,20,element.getElemetlocator(),element.get_elementName());
+		elementExist=self.check_element.isvalue(driver,60,element.getElemetlocator(),element.get_elementName());
 		if elementExist:
 			input_check=True
 
 		else:
 			while time1<30:
 				time1+=1
-				if self.check_element.isvalue(driver,20,element.getElemetlocator(),element.get_elementName()):
+				if self.check_element.isvalue(driver,60,element.getElemetlocator(),element.get_elementName()):
 					input_check=True
 					break
 		return input_check
-
-	
-	def InputCheck(self, driver,element):
-		return self.InputProcess(driver,element)
-
-	def InputKeys(self, driver,element,input_keys):
-		return self.InputKeysProcess(driver,element,input_keys)

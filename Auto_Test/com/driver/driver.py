@@ -1,6 +1,6 @@
 from Auto_Test.com.util.BrowserDriverFactory import BrowserDriverFactory
 from Auto_Test.com.util.ScreenShot import take_screen_shot
-from Auto_Test.config.read_config import ConfigParser
+from Auto_Test.config.rw_config import ConfigParser
 from Auto_Test.com.util.Login import Login
 
 

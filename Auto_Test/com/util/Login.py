@@ -1,7 +1,7 @@
 import time
 from selenium.webdriver.common.by import By
 # from Auto_Test.com.element_op import Click
-from Auto_Test.config.read_config import ConfigParser
+from Auto_Test.config.rw_config import ConfigParser
 from Auto_Test.com.util.Checkelement import *
 import logging
 from selenium.webdriver.common.action_chains import ActionChains

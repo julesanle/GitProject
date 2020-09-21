@@ -34,7 +34,7 @@ class BrowserHelp:
 	# 判断当前打开的窗口数
 		def WindowCount(self,driver,windownum):
 			try:
-				WebDriverWait(driver,30).until(
+				WebDriverWait(driver,60).until(
 						  EC.numberOfWindowsToBe(windownum))
 				return True
 			except Exception as e:

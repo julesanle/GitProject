@@ -1,8 +1,8 @@
 from selenium.webdriver import ActionChains
-
+from selenium.webdriver.support.wait import WebDriverWait
 from Auto_Test.com.util.Checkelement import Checkelement
 from Auto_Test.com.util.GetElement import GetElement
-
+from selenium.webdriver.support import expected_conditions as EC
 import logging
 import time
 
@@ -19,10 +19,13 @@ class Click:
 		if len(all_handles) > 1:
 			driver.switch_to.window(all_handles[-1])  # 切换到最新窗口操作
 		try:
-			if(self.checkelement.wait_element(driver, 20, locator)):
+			if(self.checkelement.wait_element(driver, 60, locator)):
 				ele = driver.find_element(locator[0],locator[1])
 				self.getelement.scrollToElement(driver, locator)
+				time.sleep(2)
+				# WebDriverWait(driver,5).until(EC.element_to_be_clickable(locator)).click()
 				ele.click()
+				# ActionChains(driver).move_to_element(ele).click().perform()
 				time.sleep(1)
 				return True
 			else:

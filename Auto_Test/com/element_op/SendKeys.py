@@ -11,7 +11,7 @@ class SendKeys:
 
 	def send_keys(self, driver,locator,words,description):
 		try:
-			if self.check_element.wait_element(driver, 20, locator):
+			if self.check_element.wait_element(driver, 60, locator):
 				self.get_element.scrollToElement(driver, locator)
 				driver.find_element(locator[0],locator[1]).send_keys(words)
 				return True

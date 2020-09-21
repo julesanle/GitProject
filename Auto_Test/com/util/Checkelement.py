@@ -10,16 +10,22 @@ class Checkelement:
 
     # 等待元素加载完成
     def wait_element(self,driver,time,locator):
+        all_handles = driver.window_handles
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
         try:
             WebDriverWait(driver,time).until(EC.presence_of_element_located(locator))
             return True
-            # logger.info("加载完成");
         except Exception as e:
             logging.error("未加载成功"+str(e))
             return False
 
     #等待的元素不存在
     def wait_noelement(self, driver, time, locator):
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
         try:
             WebDriverWait(driver, time).until(EC.NoSuchElementException)
             return True
@@ -38,27 +44,41 @@ class Checkelement:
             return False
 
     # 等待元素包含特定值
-    def WaitelementContainstext(self,driver,wtime,locator,text):
-        try:
-            wait_time=0
-            ele=driver.find_element(locator[0],locator[1])
-            self.wait_element(driver, time, locator)
-            while(wait_time<wtime):
-                time.sleep(1)
-                print('准备获取 text')
-                elementtext=driver.find_element(locator[0],locator[1]).text
-                print('已获取 text')
-                print(text)
-                print(elementtext)
-                if text in elementtext:
+    def contains_text(self,driver,wtime,locator,text):
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
+        if self.wait_element(driver, wtime, locator):
+            time.sleep(1)
+            ele = driver.find_elements(locator[0], locator[1])
+            for e in ele:
+                if text in e.text:
                     return True
-            return False
-        except Exception as e:
-            logging.error(str(e))
-            return False
+                if e == ele[len(ele) - 1]:
+                    return False
+        return False
+
+    # 检查数据不包含给定值
+    def not_contains_text(self, driver, wtime, locator, text):
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
+        if self.wait_element(driver, wtime, locator):
+            time.sleep(1)
+            ele = driver.find_elements(locator[0], locator[1])
+            for e in ele:
+                if text in e.text:
+                    return False
+        return True
 
     # 等待元素不为定值
     def WaitelementtextNotToBe(self,driver,time,locator,text):
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
         try:
              b=self.wait_element(driver, time, locator)
              print(b)
@@ -78,6 +98,10 @@ class Checkelement:
 
     # 等待元素与特定值相同
     def WaitelementtextToBe(self,driver,time,locator,text):
+        all_handles = driver.window_handles
+        # print(all_handles)
+        if len(all_handles) > 1:
+            driver.switch_to.window(all_handles[-1])  # 切换到新窗口
         try:
             WebDriverWait(driver,time).until(EC.text_to_be_present_in_element(locator,text))
             return True
@@ -96,26 +120,6 @@ class Checkelement:
         except StaleElementReferenceException as e:
             is_refresh = True
         return is_refresh
-
-
-     # 检查元素是否有值
-    def isvalue(self,driver,time,locator,notice):
-        try:
-            wait_time=0
-            self.wait_element(driver,time,locator)
-            while(wait_time<time):
-                time.sleep(1)
-                premium=driver.findElement(locator).getAttribute("value")
-                if premium.equals!="":
-                    logging.info(notice+"校验成功")
-                    return True
-
-            logging.error(notice+"未显示")
-            return False
-
-        except Exception as e:
-            logging.error(str(e))
-            return False
 
     # 等待元素属性值是否为特定值
     def isAttributeValue(self,driver,time,locator,AttributeValue):

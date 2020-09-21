@@ -10,7 +10,7 @@ class GetText:
     def get_text(self, driver, locator, description):
         # locator须是tuple  (loc_type,locator)
         try:
-            if self.check_element.wait_element(driver, 20, locator):
+            if self.check_element.wait_element(driver, 60, locator):
                 return driver.find_element(locator).get_text()
             else:
                 logging.error("未找到元素:" + description)

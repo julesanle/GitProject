@@ -7,7 +7,7 @@ class Scroll:
 	check_element = Checkelement()
 
 	def scrollProcess(self, driver,element):
-		if self.check_element.Waitelement(driver,20,element.getElemetlocator()):
+		if self.check_element.Waitelement(driver,60,element.getElemetlocator()):
 			time.sleep(1)
 			e = driver.findElement(element.getElemetlocator())
 			# js = "document.getElementsByClassName('form-control')[0].value='%s';" % (requestCode[i][0].value)

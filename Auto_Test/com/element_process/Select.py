@@ -15,13 +15,17 @@ class Select:
 	def usual_select(self, driver,element):
 		name = element['element_name']
 		loc_type = element['loc_type']
-		locator = element['locator'].split(',')
+		locator = element['locator'].split('|')
 		print(locator)
+		all_handles = driver.window_handles
+		# print(all_handles)
+		if len(all_handles) > 1:
+			driver.switch_to.window(all_handles[-1])  # 切换到新窗口
 		try:
 			# 点击按钮
 			self.click.clickelement(driver, (eval(loc_type), locator[0]), name)
 			# 等待下拉列表数据加载
-			if self.check_ele.wait_element(driver, 10, (eval(loc_type), locator[1])):
+			if self.check_ele.wait_element(driver, 60, (eval(loc_type), locator[1])):
 				time.sleep(0.5)
 				# 选择第一个点击
 				loc = self.get_element.get_eleloc(driver, (eval(loc_type), locator[1]),'1')
@@ -38,7 +42,7 @@ class Select:
 		# 点击按钮
 		self.click.clickelement(driver,element.getElemetlocator(),element.getElementName())
 		# 等待下拉列表数据加载
-		if self.check_ele.wait_element(driver,10,element.getElemetlocator2()):
+		if self.check_ele.wait_element(driver,60,element.getElemetlocator2()):
 			time.sleep(1)
 			self.click.clickelement(driver,element.getElemetlocator2(),element.getElementName())
 			return True

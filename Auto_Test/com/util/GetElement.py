@@ -105,6 +105,10 @@ class GetElement:
 
 
 	def scrollToElement(self, driver, locator):
+		all_handles = driver.window_handles
+		# print(all_handles)
+		if len(all_handles) > 1:
+			driver.switch_to.window(all_handles[-1])  # 切换到新窗口
 		try:
 			ele = driver.find_element(locator[0],locator[1])
 			js = "arguments[0].scrollIntoView();"
@@ -119,6 +123,7 @@ class GetElement:
 		try:
 			ul = driver.find_element(locator[0],locator[1])
 			li = ul.find_elements_by_xpath('li')
+
 			if i == '-1':
 				loc=locator[1]+'/li['+str(len(li))+']'
 			else:
@@ -126,5 +131,5 @@ class GetElement:
 			return loc
 		except Exception as e:
 			logging.error(str(e))
-			return False
+			return None
 
